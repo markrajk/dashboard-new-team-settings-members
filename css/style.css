@@ -153,48 +153,10 @@ main {
   background-color: #fff; }
 
 .section-team-settings {
-  padding-top: 11.6rem;
+  padding-top: 13.3rem;
   padding-bottom: 3rem; }
-  .section-team-settings .subheader {
-    padding-top: 3.7rem;
-    display: flex;
-    align-items: center;
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1a173b; }
-  .section-team-settings h2 {
-    display: block;
-    margin: 0;
-    padding-bottom: 1.2rem;
-    font-family: "Open Sans", sans-serif;
-    font-size: 2.6rem;
-    letter-spacing: -0.39px;
-    color: #1d1d21; }
-    .section-team-settings h2 span {
-      font-weight: 600; }
-    .section-team-settings h2 svg {
-      margin-left: 2rem;
-      margin-top: -.2rem;
-      width: 2.1rem;
-      height: 2.1rem; }
-      .section-team-settings h2 svg .cls-1 {
-        fill: #1477fc; }
-      .section-team-settings h2 svg .cls-2 {
-        fill: none;
-        stroke: #fff;
-        stroke-linecap: round;
-        stroke-width: 1.5px; }
-  .section-team-settings .custom-dd-link {
-    font-family: "Heebo-Medium";
-    font-size: 1.5rem;
-    letter-spacing: 0.38px;
-    color: #1477fc; }
-    .section-team-settings .custom-dd-link .search {
-      margin-right: .5rem;
-      font-size: 3rem; }
   .section-team-settings .side-menu {
-    margin-top: 6.6rem;
+    padding-top: 5.35rem;
     margin-left: -9rem;
     margin-right: 2.3rem;
     background-color: #FFF;
@@ -240,6 +202,47 @@ main {
     @media (max-width: 767px) {
       .section-team-settings-main {
         margin-right: 0rem; } }
+    .section-team-settings-main-header {
+      padding-top: 1.85rem;
+      padding-bottom: 1.95rem; }
+      .section-team-settings-main-header .subheader {
+        margin-bottom: .6rem;
+        display: flex;
+        align-items: center;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #1a173b; }
+      .section-team-settings-main-header h2 {
+        display: block;
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        font-size: 2.45rem;
+        letter-spacing: -0.39px;
+        color: #1d1d21; }
+        .section-team-settings-main-header h2 span {
+          font-weight: 600; }
+        .section-team-settings-main-header h2 svg {
+          margin-left: 2rem;
+          margin-top: -.2rem;
+          width: 2.1rem;
+          height: 2.1rem;
+          cursor: pointer; }
+          .section-team-settings-main-header h2 svg .cls-1 {
+            fill: #1477fc; }
+          .section-team-settings-main-header h2 svg .cls-2 {
+            fill: none;
+            stroke: #fff;
+            stroke-linecap: round;
+            stroke-width: 1.5px; }
+      .section-team-settings-main-header .custom-dd-link {
+        font-family: "Heebo-Medium";
+        font-size: 1.5rem;
+        letter-spacing: 0.38px;
+        color: #1477fc; }
+        .section-team-settings-main-header .custom-dd-link .search {
+          margin-right: .5rem;
+          font-size: 3rem; }
     .section-team-settings-main-table .panel-body table {
       border: 1px solid #E5E5E5;
       /* Flex Table */ }

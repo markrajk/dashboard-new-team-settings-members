@@ -231,6 +231,7 @@ header {
     padding-top: 4rem;
     display: flex;
     border-bottom: 1.25px solid #e4e4e4;
+
     & ul {
       padding: 0;
       margin: 0;
@@ -327,68 +328,11 @@ main {
 }
 
 .section-team-settings {
-  padding-top: 11.6rem;
+  padding-top: 13.3rem;
   padding-bottom: 3rem;
-  
-
-  & .subheader {
-    padding-top: 3.7rem;
-    display: flex;
-    align-items: center;
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1a173b;
-  }
-
-  & h2 {
-    display: block;
-    margin: 0;
-    
-    padding-bottom: 1.2rem;
-    font-family: "Open Sans", sans-serif;
-    font-size: 2.6rem;
-    letter-spacing: -0.39px;
-    color: #1d1d21;
-    //border-bottom: solid 1.25px #E4E4E4;
-
-    & span {
-      font-weight: 600;
-    }
-
-    & svg {
-      margin-left: 2rem;
-      margin-top: -.2rem;
-      width: 2.1rem;
-      height: 2.1rem;
-
-      & .cls-1 {
-        fill: #1477fc;
-      }
-
-      & .cls-2 {
-        fill: none;
-        stroke: #fff;
-        stroke-linecap: round;
-        stroke-width: 1.5px;
-      }
-    }
-  }
-
-  & .custom-dd-link {
-    font-family: "Heebo-Medium";
-    font-size: 1.5rem;
-    letter-spacing: 0.38px;
-    color: #1477fc;
-
-    & .search {
-      margin-right: .5rem;
-      font-size: 3rem;
-    }
-  }
 
   & .side-menu {
-    margin-top: 6.6rem;
+    padding-top: 5.35rem;
     margin-left: -9rem;
     margin-right: 2.3rem;
     background-color: #FFF;
@@ -450,6 +394,65 @@ main {
     @include respond(desktop-sm) {
       margin-right: 0rem;
     }
+
+    &-header {
+      padding-top: 1.85rem;
+      padding-bottom: 1.95rem;
+      & .subheader {
+        margin-bottom: .6rem;
+        display: flex;
+        align-items: center;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #1a173b;
+      }
+    
+      & h2 {
+        display: block;
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        font-size: 2.45rem;
+        letter-spacing: -0.39px;
+        color: #1d1d21;
+    
+        & span {
+          font-weight: 600;
+        }
+    
+        & svg {
+          margin-left: 2rem;
+          margin-top: -.2rem;
+          width: 2.1rem;
+          height: 2.1rem;
+          cursor: pointer;
+    
+          & .cls-1 {
+            fill: #1477fc;
+          }
+    
+          & .cls-2 {
+            fill: none;
+            stroke: #fff;
+            stroke-linecap: round;
+            stroke-width: 1.5px;
+          }
+        }
+      }
+    
+      & .custom-dd-link {
+        font-family: "Heebo-Medium";
+        font-size: 1.5rem;
+        letter-spacing: 0.38px;
+        color: #1477fc;
+    
+        & .search {
+          margin-right: .5rem;
+          font-size: 3rem;
+        }
+      }
+    }
+
     &-table {
       .panel-body {
         & table {
