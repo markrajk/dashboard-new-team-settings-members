@@ -1,0 +1,273 @@
+@font-face {
+  font-family: "HankRnd-Light";
+  src: url("../fonts/Hank Rnd/EOT/HankRnd-Light.eot");
+  src: url("../fonts/Hank Rnd/OTF/HankRnd-Light.otf") format("otf"), url("../fonts/Hank Rnd/WOFF2/HankRnd-Light.woff2") format("woff2"), url("../fonts/Hank Rnd/WOFF/HankRnd-Light.woff") format("woff"), url("../fonts/Hank Rnd/TTF/HankRnd-Light.ttf") format("truetype"); }
+@font-face {
+  font-family: "HankRnd-Regular";
+  src: url("../fonts/Hank Rnd/EOT/HankRnd-Regular.eot");
+  src: url("../fonts/Hank Rnd/OTF/HankRnd-Regular.otf") format("otf"), url("../fonts/Hank Rnd/WOFF2/HankRnd-Regular.woff2") format("woff2"), url("../fonts/Hank Rnd/WOFF/HankRnd-Regular.woff") format("woff"), url("../fonts/Hank Rnd/TTF/HankRnd-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: "HankRnd-Bold";
+  src: url("../fonts/Hank Rnd/EOT/HankRnd-Bold.eot");
+  src: url("../fonts/Hank Rnd/OTF/HankRnd-Bold.otf") format("otf"), url("../fonts/Hank Rnd/WOFF2/HankRnd-Bold.woff2") format("woff2"), url("../fonts/Hank Rnd/WOFF/HankRnd-Bold.woff") format("woff"), url("../fonts/Hank Rnd/TTF/HankRnd-Bold.ttf") format("truetype"); }
+@font-face {
+  font-family: "HankRnd-Black";
+  src: url("../fonts/Hank Rnd/EOT/HankRnd-Black.eot");
+  src: url("../fonts/Hank Rnd/OTF/HankRnd-Black.otf") format("otf"), url("../fonts/Hank Rnd/WOFF2/HankRnd-Black.woff2") format("woff2"), url("../fonts/Hank Rnd/WOFF/HankRnd-Black.woff") format("woff"), url("../fonts/Hank Rnd/TTF/HankRnd-Black.ttf") format("truetype"); }
+@font-face {
+  font-family: "Heebo-Thin";
+  src: url("../fonts/Heebo/Heebo-Thin.ttf") format("truetype"); }
+@font-face {
+  font-family: "Heebo-Light";
+  src: url("../fonts/Heebo/Heebo-Light.ttf") format("truetype"); }
+@font-face {
+  font-family: "Heebo-Regular";
+  src: url("../fonts/Heebo/Heebo-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: "Heebo-Medium";
+  src: url("../fonts/Heebo/Heebo-Medium.ttf") format("truetype"); }
+@font-face {
+  font-family: "Heebo-Bold";
+  src: url("../fonts/Heebo/Heebo-Bold.ttf") format("truetype"); }
+@font-face {
+  font-family: "Heebo-ExtraBold";
+  src: url("../fonts/Heebo/Heebo-ExtraBold.ttf") format("truetype"); }
+@font-face {
+  font-family: "Heebo-Black";
+  src: url("../fonts/Heebo/Heebo-Black.ttf") format("truetype"); }
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 62.5%; }
+  @media (max-width: 1800px) {
+    html {
+      font-size: 58%; } }
+  @media (max-width: 1500px) {
+    html {
+      font-size: 53%; } }
+  @media (max-width: 991px) {
+    html {
+      font-size: 48%; } }
+
+body {
+  height: 100%;
+  width: 100%;
+  min-width: 600px; }
+
+header {
+  font-family: "Heebo-Bold";
+  z-index: 10000; }
+  header .navbar {
+    padding-top: 1rem !important;
+    padding-bottom: 0.5rem !important;
+    font-family: "Heebo-Bold";
+    background-color: #fdfdfd !important;
+    border-bottom: 1px solid #e4e4e4; }
+    header .navbar a, header .navbar span {
+      color: #000 !important; }
+    header .navbar-left {
+      margin-left: 0.1rem;
+      font-size: 1.375rem; }
+    header .navbar-center {
+      font-size: 2.2rem; }
+      header .navbar-center img {
+        margin-top: -0.15rem;
+        margin-right: 0.5rem;
+        width: 2.7rem;
+        height: 2.7rem;
+        border-radius: 50%; }
+    header .navbar-right {
+      font-size: 1.375rem; }
+  header .header-links {
+    font-family: "Heebo-Regular";
+    background-color: #fdfdfd !important;
+    padding: 0;
+    padding-top: 4rem;
+    display: flex;
+    border-bottom: 1.25px solid #e4e4e4; }
+    header .header-links ul {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      list-style: none; }
+      header .header-links ul li {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        padding-bottom: 1.2rem;
+        margin-right: 1.8rem;
+        text-align: center; }
+        header .header-links ul li a {
+          white-space: nowrap;
+          text-decoration: none;
+          font-size: 1.45rem;
+          color: #8f8fa2; }
+        header .header-links ul li.active {
+          font-family: "Heebo-Bold";
+          position: relative; }
+          header .header-links ul li.active a {
+            color: #343441; }
+          header .header-links ul li.active::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 1.25px;
+            width: 100%;
+            transform: translate(0, 100%);
+            background-color: #fd2851; }
+    header .header-links-btn, header .header-links-btn:hover {
+      margin-top: -0.2rem;
+      font-family: "Heebo-Medium";
+      text-transform: uppercase;
+      text-decoration: none;
+      white-space: nowrap;
+      height: 2.6rem;
+      display: block;
+      margin-left: auto;
+      padding: 0.45rem 1rem;
+      padding-right: 1rem;
+      font-size: 1.2rem;
+      color: #fff;
+      border-radius: 14px;
+      background-color: #fd2851; }
+      header .header-links-btn.header-links-btn-blue, header .header-links-btn:hover.header-links-btn-blue {
+        background-color: #1477fc; }
+      header .header-links-btn svg, header .header-links-btn:hover svg {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-left: .3rem;
+        margin-top: -.2rem; }
+        header .header-links-btn svg .cls-1, header .header-links-btn svg .cls-2, header .header-links-btn svg .cls-4, header .header-links-btn:hover svg .cls-1, header .header-links-btn:hover svg .cls-2, header .header-links-btn:hover svg .cls-4 {
+          fill: none; }
+        header .header-links-btn svg .cls-1, header .header-links-btn svg .cls-2, header .header-links-btn:hover svg .cls-1, header .header-links-btn:hover svg .cls-2 {
+          stroke: #fff; }
+        header .header-links-btn svg .cls-2, header .header-links-btn:hover svg .cls-2 {
+          stroke-linecap: round;
+          stroke-width: .15rem; }
+        header .header-links-btn svg .cls-3, header .header-links-btn:hover svg .cls-3 {
+          stroke: none; }
+
+main {
+  min-height: 100%;
+  background-color: #fff; }
+
+.section-team-settings {
+  padding-top: 13rem;
+  padding-bottom: 3rem; }
+  .section-team-settings h2 {
+    display: block;
+    margin: 0;
+    padding-top: 3.7rem;
+    padding-bottom: 1.2rem;
+    font-family: "Open Sans", sans-serif;
+    font-size: 2.6rem;
+    letter-spacing: -0.39px;
+    color: #1d1d21;
+    border-bottom: solid 1.25px #E4E4E4; }
+    .section-team-settings h2 span {
+      font-weight: 600; }
+  .section-team-settings .side-menu {
+    margin-top: 4.2rem;
+    margin-left: -9rem;
+    margin-right: 2.3rem;
+    background-color: #FFF;
+    width: 18rem; }
+    @media (max-width: 1500px) {
+      .section-team-settings .side-menu {
+        margin-left: -3rem; } }
+    @media (max-width: 991px) {
+      .section-team-settings .side-menu {
+        margin-left: -1rem; } }
+    @media (max-width: 767px) {
+      .section-team-settings .side-menu {
+        margin-left: 0rem; } }
+    .section-team-settings .side-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0; }
+      .section-team-settings .side-menu ul li {
+        padding-left: 1rem;
+        height: 3.1rem;
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        cursor: pointer; }
+        .section-team-settings .side-menu ul li:hover {
+          background-color: #ededed; }
+        .section-team-settings .side-menu ul li.active {
+          background-color: #ededed; }
+        .section-team-settings .side-menu ul li a {
+          text-decoration: none;
+          font-family: "Heebo-Medium";
+          font-size: 1.3rem;
+          color: #333333; }
+  .section-team-settings-main {
+    width: 100%; }
+    .section-team-settings-main-table .table-row {
+      height: 5.2rem;
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      border-bottom: 1px solid #F3F3F3; }
+      .section-team-settings-main-table .table-row .column-1 {
+        width: 23rem;
+        font-family: "Heebo-Medium";
+        color: #333333; }
+      .section-team-settings-main-table .table-row .column-2 {
+        display: flex;
+        font-family: "Heebo-Regular";
+        color: #333333; }
+
+.options {
+  margin-top: 0.5rem;
+  margin-left: 0.2rem;
+  margin-right: auto;
+  font-size: 1.45rem;
+  font-weight: normal; }
+  .options a {
+    color: #878590; }
+    .options a.active {
+      color: #1a173b; }
+  .options .divider {
+    margin: 0 0.5rem;
+    font-weight: bold; }
+
+.p-default {
+  padding-left: 35rem !important;
+  padding-right: 35rem !important; }
+  @media (max-width: 1800px) {
+    .p-default {
+      padding-left: 17rem !important;
+      padding-right: 17rem !important; } }
+  @media (max-width: 1500px) {
+    .p-default {
+      padding-left: 12rem !important;
+      padding-right: 12rem !important; } }
+  @media (max-width: 1199px) {
+    .p-default {
+      padding-left: 10rem !important;
+      padding-right: 10rem !important; } }
+  @media (max-width: 991px) {
+    .p-default {
+      padding-left: 5rem !important;
+      padding-right: 5rem !important; } }
+  @media (max-width: 767px) {
+    .p-default {
+      padding-left: 3rem !important;
+      padding-right: 3rem !important; } }
+
+.btn-custom-blue,
+.btn-custom-blue:hover {
+  font-family: "Open Sans", sans-serif;
+  white-space: nowrap;
+  display: inline-block;
+  padding: 0.8rem 2.2rem;
+  background-color: #0077ff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 0.4rem;
+  text-decoration: none; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,632 @@
+$green-gradient: linear-gradient(#3cf166, #17de24);
+$orange-gradient: linear-gradient(#f5e144, #ffa30f);
+$red-gradient: linear-gradient(#fa2020, #ef0049);
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == desktop-sm {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet {
+    @media (max-width: 850px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop-md {
+    @media (max-width: 991px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop-lg {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop-lgxl {
+    @media (max-width: 1400px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop-xl {
+    @media (max-width: 1500px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop-xxl {
+    @media (max-width: 1800px) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-h($breakpoint) {
+  @if $breakpoint == height-sm {
+    @media (max-height: 600px) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-v($breakpoint) {
+  @if $breakpoint == desktop-xsm {
+    @media (max-height: 480px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop-sm {
+    @media (max-height: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop-mds {
+    @media (max-height: 700px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop-md {
+    @media (max-height: 991px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop-lg {
+    @media (max-height: 1199px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop-xl {
+    @media (max-height: 1500px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop-xxl {
+    @media (max-height: 1800px) {
+      @content;
+    }
+  }
+}
+
+@function resize($base) {
+  $result: $base * 0.9;
+  @return $result;
+}
+@function calculate($val1, $val2) {
+  $result: $val1 - $val2;
+  @return $result;
+}
+
+// FONTS
+@font-face {
+  font-family: "HankRnd-Light";
+  src: url("../fonts/Hank\ Rnd/EOT/HankRnd-Light.eot");
+  src: url("../fonts/Hank\ Rnd/OTF/HankRnd-Light.otf") format("otf"),
+    url("../fonts/Hank\ Rnd/WOFF2/HankRnd-Light.woff2") format("woff2"),
+    url("../fonts/Hank\ Rnd/WOFF/HankRnd-Light.woff") format("woff"),
+    url("../fonts/Hank\ Rnd/TTF/HankRnd-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "HankRnd-Regular";
+  src: url("../fonts/Hank\ Rnd/EOT/HankRnd-Regular.eot");
+  src: url("../fonts/Hank\ Rnd/OTF/HankRnd-Regular.otf") format("otf"),
+    url("../fonts/Hank\ Rnd/WOFF2/HankRnd-Regular.woff2") format("woff2"),
+    url("../fonts/Hank\ Rnd/WOFF/HankRnd-Regular.woff") format("woff"),
+    url("../fonts/Hank\ Rnd/TTF/HankRnd-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "HankRnd-Bold";
+  src: url("../fonts/Hank\ Rnd/EOT/HankRnd-Bold.eot");
+  src: url("../fonts/Hank\ Rnd/OTF/HankRnd-Bold.otf") format("otf"),
+    url("../fonts/Hank\ Rnd/WOFF2/HankRnd-Bold.woff2") format("woff2"),
+    url("../fonts/Hank\ Rnd/WOFF/HankRnd-Bold.woff") format("woff"),
+    url("../fonts/Hank\ Rnd/TTF/HankRnd-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "HankRnd-Black";
+  src: url("../fonts/Hank\ Rnd/EOT/HankRnd-Black.eot");
+  src: url("../fonts/Hank\ Rnd/OTF/HankRnd-Black.otf") format("otf"),
+    url("../fonts/Hank\ Rnd/WOFF2/HankRnd-Black.woff2") format("woff2"),
+    url("../fonts/Hank\ Rnd/WOFF/HankRnd-Black.woff") format("woff"),
+    url("../fonts/Hank\ Rnd/TTF/HankRnd-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Heebo-Thin";
+  src: url("../fonts/Heebo/Heebo-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Heebo-Light";
+  src: url("../fonts/Heebo/Heebo-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Heebo-Regular";
+  src: url("../fonts/Heebo/Heebo-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Heebo-Medium";
+  src: url("../fonts/Heebo/Heebo-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Heebo-Bold";
+  src: url("../fonts/Heebo/Heebo-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Heebo-ExtraBold";
+  src: url("../fonts/Heebo/Heebo-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Heebo-Black";
+  src: url("../fonts/Heebo/Heebo-Black.ttf") format("truetype");
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 62.5%;
+  //font-size: 68%;
+  @include respond(desktop-xxl) {
+    font-size: 58%;
+  }
+
+  @include respond(desktop-xl) {
+    font-size: 53%;
+  }
+
+  @include respond(desktop-md) {
+    font-size: 48%;
+  }
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  min-width: 600px;
+}
+header {
+  font-family: "Heebo-Bold";
+  z-index: 10000;
+  .navbar {
+    padding-top: 1rem !important;
+    padding-bottom: 0.5rem !important;
+    font-family: "Heebo-Bold";
+    background-color: #fdfdfd !important;
+    border-bottom: 1px solid #e4e4e4;
+
+    & a,
+    & span {
+      color: #000 !important;
+    }
+
+    &-left {
+      margin-left: 0.1rem;
+      font-size: 1.375rem;
+    }
+
+    &-center {
+      font-size: 2.2rem;
+
+      & img {
+        margin-top: -0.15rem;
+        margin-right: 0.5rem;
+        width: 2.7rem;
+        height: 2.7rem;
+        border-radius: 50%;
+      }
+    }
+
+    &-right {
+      font-size: 1.375rem;
+    }
+  }
+
+  .header-links {
+    font-family: "Heebo-Regular";
+    background-color: #fdfdfd !important;
+    padding: 0;
+    padding-top: 4rem;
+    display: flex;
+    border-bottom: 1.25px solid #e4e4e4;
+    & ul {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      list-style: none;
+
+      & li {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        padding-bottom: 1.2rem;
+        margin-right: 1.8rem;
+        text-align: center;
+        & a {
+          white-space: nowrap;
+          text-decoration: none;
+          font-size: 1.45rem;
+          color: #8f8fa2;
+        }
+
+        &.active {
+          font-family: "Heebo-Bold";
+          position: relative;
+
+          & a {
+            color: #343441;
+          }
+          &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 1.25px;
+            width: 100%;
+
+            transform: translate(0, 100%);
+            background-color: #fd2851;
+          }
+        }
+      }
+    }
+
+    &-btn,
+    &-btn:hover {
+      margin-top: -0.2rem;
+      font-family: "Heebo-Medium";
+      text-transform: uppercase;
+      text-decoration: none;
+      white-space: nowrap;
+      height: 2.6rem;
+      display: block;
+      margin-left: auto;
+      padding: 0.45rem 1rem;
+      padding-right: 1rem;
+      font-size: 1.2rem;
+      color: #fff;
+      border-radius: 14px;
+      background-color: #fd2851;
+
+      &.header-links-btn-blue {
+        background-color: #1477fc;
+      }
+
+      & svg {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-left: .3rem;
+        margin-top: -.2rem;
+
+        & .cls-1, .cls-2, .cls-4 {
+          fill: none;
+        }
+  
+        & .cls-1, .cls-2 {
+          stroke: #fff;
+        }
+  
+        & .cls-2 {
+          stroke-linecap: round;
+          stroke-width: .15rem;
+        }
+  
+        & .cls-3 {
+          stroke: none;
+        }
+      }
+    }
+  }
+}
+
+main {
+  min-height: 100%;
+  background-color: #fff;
+}
+
+.section-team-settings {
+  padding-top: 11.6rem;
+  padding-bottom: 3rem;
+  
+
+  & .subheader {
+    padding-top: 3.7rem;
+    display: flex;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a173b;
+  }
+
+  & h2 {
+    display: block;
+    margin: 0;
+    
+    padding-bottom: 1.2rem;
+    font-family: "Open Sans", sans-serif;
+    font-size: 2.6rem;
+    letter-spacing: -0.39px;
+    color: #1d1d21;
+    //border-bottom: solid 1.25px #E4E4E4;
+
+    & span {
+      font-weight: 600;
+    }
+
+    & svg {
+      margin-left: 2rem;
+      margin-top: -.2rem;
+      width: 2.1rem;
+      height: 2.1rem;
+
+      & .cls-1 {
+        fill: #1477fc;
+      }
+
+      & .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-width: 1.5px;
+      }
+    }
+  }
+
+  & .custom-dd-link {
+    font-family: "Heebo-Medium";
+    font-size: 1.5rem;
+    letter-spacing: 0.38px;
+    color: #1477fc;
+
+    & .search {
+      margin-right: .5rem;
+      font-size: 3rem;
+    }
+  }
+
+  & .side-menu {
+    margin-top: 6.6rem;
+    margin-left: -9rem;
+    margin-right: 2.3rem;
+    background-color: #FFF;
+    width: 18rem;
+
+    @include respond(desktop-xl) {
+      margin-left: -3rem;
+    }
+  
+    @include respond(desktop-md) {
+      margin-left: -1rem;
+    }
+  
+    @include respond(desktop-sm) {
+      margin-left: 0rem;
+    }
+
+    & ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      & li {
+        padding-left: 1rem;
+        height: 3.1rem;
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #ededed;
+        }
+
+        &.active {
+          background-color: #ededed;
+        }
+
+        & a {
+          text-decoration: none;
+          font-family: "Heebo-Medium";
+          font-size: 1.3rem;
+          color: #333333;
+        }
+      }
+    }
+  }
+
+  &-main {
+    width: 100%;
+    margin-right: -9rem;
+    @include respond(desktop-xl) {
+      margin-right: -3rem;
+    }
+  
+    @include respond(desktop-md) {
+      margin-right: -1rem;
+    }
+  
+    @include respond(desktop-sm) {
+      margin-right: 0rem;
+    }
+    &-table {
+      .panel-body {
+        & table {
+          border: 1px solid #E5E5E5;
+
+          & thead {
+            border: none!important
+          }
+          & tbody > tr.active {
+            background-color: #f2f2f2 !important;
+          }
+      
+          & i {
+            font-size: 2rem;
+            color: #5e636b;
+          }
+      
+          & img {
+            width: 2.7rem;
+            height: 2.7rem;
+            border-radius: 50%;
+            margin-right: 2rem;
+          }
+      
+          & thead tr {
+            height: 4.4rem; /* Fixed Row Height */
+          }
+
+          & tbody tr {
+            height: 4.4rem; /* Fixed Row Height */
+
+            & td {
+              font-family: "Heebo-Regular";
+              font-size: 1.35rem;
+              letter-spacing: 0.33px;
+              color: #666666;
+            }
+          }
+      
+          /* Flex Table */
+          &.flex-table {
+            display: flex;
+            flex-direction: column;
+          }
+          &.flex-table thead,
+          &.flex-table tbody {
+            display: block;
+          }
+          &.flex-table thead {
+            margin-right: 0px;
+      
+            & tr > th {
+              border-bottom: 1px solid #E5E5E5;
+              border-top: none;
+              font-family: "Heebo-Bold";
+              font-size: 1.3rem;
+              letter-spacing: 0.33px;
+              color: #666666;
+            }
+          }
+          &.flex-table tbody {
+            flex: 1;
+            max-height: calc(
+              100vh - 14.4rem - 2.8rem - 6.9rem - 12.2rem - 6.9rem - 3rem
+            );
+            overflow-y: auto;
+            overflow-x: hidden;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* Internet Explorer 10+ */
+      
+            &::-webkit-scrollbar {
+              /* WebKit */
+              width: 0;
+              height: 0;
+            }
+      
+            & tr > td {
+              border-top: none;
+            }
+      
+            & tr:not(:last-child) > td {
+              border-bottom: 1px solid #E5E5E5;
+            }
+          }
+          &.flex-table tr {
+            width: 100%;
+            display: flex;
+          }
+          &.flex-table tr td:not(.spacer-left),
+          &.flex-table tr th:not(.spacer-left) {
+            white-space: nowrap;
+            display: flex;
+            flex: 1;
+            align-items: center;
+            justify-content: start;
+          }
+      
+          &.flex-table & tbody > tr {
+            border: none !important;
+            border-bottom: 1px solid #eaebee !important;
+            
+          }
+      
+          & .checkbox {
+            flex: 0.1 !important;
+            width: 25px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// UTILITIES
+
+.options {
+  margin-top: 0.5rem;
+  margin-left: 0.2rem;
+  margin-right: auto;
+  font-size: 1.45rem;
+  font-weight: normal;
+  & a {
+    color: #878590;
+
+    &.active {
+      //font-weight: bold;
+      color: #1a173b;
+    }
+  }
+
+  & .divider {
+    margin: 0 0.5rem;
+    font-weight: bold;
+  }
+}
+
+.p-default {
+  padding-left: 35rem !important;
+  padding-right: 35rem !important;
+
+  @include respond(desktop-xxl) {
+    padding-left: 17rem !important;
+    padding-right: 17rem !important;
+  }
+
+  @include respond(desktop-xl) {
+    padding-left: 12rem !important;
+    padding-right: 12rem !important;
+  }
+
+  @include respond(desktop-lg) {
+    padding-left: 10rem !important;
+    padding-right: 10rem !important;
+  }
+
+  @include respond(desktop-md) {
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
+  }
+
+  @include respond(desktop-sm) {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+  }
+}
+
+.btn-custom-blue,
+.btn-custom-blue:hover {
+  font-family: "Open Sans", sans-serif;
+  white-space: nowrap;
+  display: inline-block;
+  padding: 0.8rem 2.2rem;
+  background-color: #0077ff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  //font-weight: 700;
+  color: #fff;
+  border-radius: 0.4rem;
+  text-decoration: none;
+}
